@@ -1,0 +1,99 @@
+/* Student Study Planner - Main Design */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f4ff;
+    color: #263238;
+    padding: 30px;
+}
+
+/* Main Heading */
+
+h1 {
+    text-align: center;
+    color: #263b80;
+    margin: 25px 0;
+    font-size: 32px;
+}
+
+p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Form Container */
+
+form {
+    background: white;
+    max-width: 450px;
+    margin: 30px auto;
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+/* Input Fields */
+
+label {
+    display: block;
+    text-align: left;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #263b80;
+}
+
+input {
+    width: 100%;
+    padding: 13px;
+    margin-top: 8px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+}
+
+input:focus {
+    border-color: #405de6;
+}
+
+/* Button */
+
+button {
+    width: 100%;
+    padding: 14px;
+    margin-top: 25px;
+    background: #405de6;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #263b80;
+}
+
+/* Responsive Design */
+
+@media (max-width: 600px) {
+    body {
+        padding: 15px;
+    }
+
+    form {
+        padding: 22px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+}

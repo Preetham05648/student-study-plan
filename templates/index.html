@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Student Study Planner</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+    <style>
+
+        .timing-box {
+            background: #e9f8ee;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        .timing-box p {
+            margin: 7px 0;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 12px;
+            margin-top: 7px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        button {
+            width: 100%;
+            padding: 14px;
+            background: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Student Study Planner</h1>
+
+        <p>Create your personalized study timetable</p>
+
+        <div class="timing-box">
+
+            <h3>Daily Study Schedule</h3>
+
+            <p><b>Start Time:</b> 09:00 AM</p>
+
+            <p><b>End Time:</b> 09:00 PM</p>
+
+            <p><b>Study Session:</b> 60 minutes</p>
+
+            <p><b>Break:</b> 15 minutes</p>
+
+        </div>
+
+        <form action="/generate" method="POST">
+
+            <label>Student Name</label>
+
+            <input
+                type="text"
+                name="name"
+                placeholder="Enter your name"
+                required
+            >
+
+            <label>Subject</label>
+
+            <input
+                type="text"
+                name="subject"
+                placeholder="Enter subject name"
+                required
+            >
+
+            <label>Exam Date</label>
+
+            <input
+                type="date"
+                name="exam_date"
+                required
+            >
+
+            <label>Daily Study Hours (Sessions)</label>
+
+            <select name="hours" required>
+
+                <option value="1">1 Session</option>
+                <option value="2">2 Sessions</option>
+                <option value="3">3 Sessions</option>
+                <option value="4">4 Sessions</option>
+                <option value="5">5 Sessions</option>
+                <option value="6">6 Sessions</option>
+                <option value="7">7 Sessions</option>
+                <option value="8">8 Sessions</option>
+                <option value="9">9 Sessions</option>
+
+            </select>
+
+            <label>Subject Difficulty</label>
+
+            <select name="difficulty" required>
+
+                <option value="3">Easy</option>
+                <option value="6" selected>Medium</option>
+                <option value="9">Hard</option>
+
+            </select>
+
+            <label>Your Preparation Level</label>
+
+            <select name="preparation" required>
+
+                <option value="2">Beginner</option>
+                <option value="5" selected>Intermediate</option>
+                <option value="8">Well Prepared</option>
+
+            </select>
+
+            <button type="submit">
+                Generate My Study Plan
+            </button>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>
